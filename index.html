@@ -9,8 +9,12 @@
     <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
     <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+    <script src="helloworld.js"></script>
 </head>
-<body>
-    
+<body ng-app="helloworld">
+    <a ui-sref="hello" ui-sref-active="active">Hello</a>
+    <a ui-sref="about" ui-sref-active="active">About</a>
+
+    <ui-view></ui-view>
 </body>
 </html>
