@@ -9,17 +9,17 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     .state('tabs', {
         url: '/tabs',
         templateUrl: 'tabs.html',
-        controller:'TabsDemoCtrl'
+        controller:'tabCtrl'
     })
     .state('tabs.tab1', {
         url: '/tab1',
         templateUrl: 'tabs.html',
-        controller:'TabsDemoCtrl'
+        controller:'tab1Ctrl'
     })
     .state('tabs.tab2', {
         url: '/tab2',
         templateUrl: 'tabs.html',
-        controller:'TabsDemoCtrl'
+        controller:'tab2Ctrl'
     })    
     ;
 
@@ -29,7 +29,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 
 myApp.controller('TabsDemoCtrl', function ($scope, $window, $state) {
     $scope.$state = $state;
-    $scope.activeTabIndex = 1;
+    
     console.log('entered TabsDemoCtrl with state: ' + $state.current.name);
 
     $scope.tabs = [
@@ -51,18 +51,22 @@ myApp.controller('TabsDemoCtrl', function ($scope, $window, $state) {
 
 myApp.controller('tabCtrl', function($scope, $state) {
     console.log($state.current.name);
-    //debugger;
+    debugger;
     $scope.$state = $state;
 });
 
 myApp.controller('tab1Ctrl', function($scope, $state) {
     console.log($state.current.name);
-    //debugger;
+    debugger;
     $scope.$state = $state;
+    $scope.activeTabIndex = 0;
+    $scope.cure = "tab1";
 });
 
 myApp.controller('tab2Ctrl', function($scope, $state) {
     console.log($state.current.name);
-    //debugger;
+    debugger;
     $scope.$state = $state;
+    $scope.activeTabIndex = 1;
+    $scope.cure = "tab2";
 });

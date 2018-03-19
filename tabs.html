@@ -2,6 +2,8 @@
     <uib-tab index="0" ui-sref="tabs.tab1" ui-sref-active="active" heading="tab1 heading">Static content
       eval:      {{ $state.includes('tabs') }} 
 
+      cure:   {{cure}}
+
     </uib-tab>
     <uib-tab index="1" ui-sref="tabs.tab2" ui-sref-active="active" heading="tab2 heading">
         <div ng-include="'tab2Content.html'"></div>

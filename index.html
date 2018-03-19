@@ -27,7 +27,7 @@
 </head>
 <body ng-app="helloworld">
     <a ui-sref="home" ui-sref-active="active">Home</a>
-    <a ui-sref="tabs" ui-sref-active="active" ng-class="{'active':$state.includes('tabs')}">Tabs</a>
+    <a ui-sref="tabs" ui-sref-active="active" ng-class="{'active':$state.includes('tabs')}">Tabs eval: {{$state.includes('tabs')}}</a>
 
     <ui-view></ui-view>
 </body>
